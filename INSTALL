@@ -1,0 +1,3 @@
+The environment should contain Python 3.6 or above and ffmpeg (for MP3 decoding). Python 2.7 should work but is untested. The install.sh script should install ffmpeg on an Ubuntu/Debian system.
+
+Apart from that the install.sh script should install all Python dependencies via pip, pip should be visible in $PATH.
