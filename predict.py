@@ -16,10 +16,10 @@ import json
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
 
 
-def reshape_model(model: Model, new_shape):
-    copy: Model = keras.models.model_from_json(model.to_json())
+def reshape_model(model, new_shape):
+    copy = keras.models.model_from_json(model.to_json())
     copy._layers[0].batch_input_shape = (None,) + new_shape
-    new_model: Model = keras.models.model_from_json(copy.to_json())
+    new_model = keras.models.model_from_json(copy.to_json())
     new_model.set_weights(model.get_weights())
     return new_model
 
