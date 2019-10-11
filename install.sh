@@ -8,3 +8,4 @@ pip install --user librosa
 pip install --user scikit-learn
 pip install --user matplotlib
 pip install --user scipy
+pip install --user kapre
